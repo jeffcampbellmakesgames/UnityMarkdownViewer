@@ -70,9 +70,9 @@ namespace MG.MDV
                 pipelineBuilder.UsePipeTables(new PipeTableOptions
                 {
                     RequireHeaderSeparator = Preferences.PipedTablesRequireRequireHeaderSeparator
-                });    
+                });
             }
-            
+
 
             var pipeline = pipelineBuilder.Build();
             pipeline.Setup( renderer );
@@ -95,14 +95,15 @@ namespace MG.MDV
 
         //------------------------------------------------------------------------------
 
-        public void Draw()
+        public void Draw(float contentWidth = float.NaN)
         {
             GUI.skin    = mSkin;
             GUI.enabled = true;
 
             // useable width of inspector windows
 
-            var contentWidth = EditorGUIUtility.currentViewWidth - mSkin.verticalScrollbar.fixedWidth - 2.0f * Margin.x;
+            if (float.IsNaN(width))
+                contentWidth = EditorGUIUtility.currentViewWidth - mSkin.verticalScrollbar.fixedWidth - 2.0f * Margin.x;
 
 
             // draw content
