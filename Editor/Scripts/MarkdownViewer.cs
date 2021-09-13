@@ -102,7 +102,7 @@ namespace MG.MDV
 
             // useable width of inspector windows
 
-            if (float.IsNaN(width))
+            if (float.IsNaN(contentWidth))
                 contentWidth = EditorGUIUtility.currentViewWidth - mSkin.verticalScrollbar.fixedWidth - 2.0f * Margin.x;
 
 
