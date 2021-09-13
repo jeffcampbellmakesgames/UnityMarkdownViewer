@@ -1,3 +1,10 @@
+This fork makes for embedding MarkdownViewer in a EditorWindow a bit easier:
+* MarkdownViewer.Draw(float contentWidth = float.NaN)
+Passing default value results in normal behavior, but passing a value draws view in the specified width.
+
+* MarkdownViewer.drawToolbar { get; set; } = true;
+Prevents the toolbar from being drawn if false, true is normal behavior.
+
 # Unity Markdown Viewer (UMV)
 > A markdown viewer for unity
 
