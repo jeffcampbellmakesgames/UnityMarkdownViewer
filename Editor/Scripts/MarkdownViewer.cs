@@ -21,6 +21,8 @@ namespace MG.MDV
 
         private static History  mHistory         = new History();
 
+        public bool drawToolbar { get; set; } = true;
+
         public MarkdownViewer( GUISkin skin, string path, string content )
         {
             mSkin        = skin;
@@ -130,6 +132,10 @@ namespace MG.MDV
 
         void DrawToolbar( float contentWidth )
         {
+
+            if (!drawToolbar)
+                return;
+
             var style  = GUI.skin.button;
             var size   = style.fixedHeight;
             var btn    = new Rect( Margin.x + contentWidth - size, Margin.y, size, size );
