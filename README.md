@@ -4,7 +4,7 @@ This fork adds a few tweaks needed for [AssetUtility](https://github.com/Zumwani
 
 Changes:
 * MarkdownViewer.Draw(float contentWidth = float.NaN)\
-Passing default value results in normal behavior, but passing a value draws view in the specified width, rather than width of editor window.
+Passing default value results in normal behavior, which would use the width of the entire editor window, but passing a value draws view in the specified width instead.
 
 * MarkdownViewer.drawToolbar { get; set; } = true;\
 Prevents the toolbar from being drawn if false, true is normal behavior.
