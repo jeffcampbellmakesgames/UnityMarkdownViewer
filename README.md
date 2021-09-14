@@ -1,4 +1,8 @@
 This fork adds a few tweaks needed for [AssetUtility](https://github.com/Zumwani/AssetUtility), which embeds two MarkdownViews in a documentation window.
+
+![](https://github.com/Zumwani/AssetUtility/blob/main/images/documentation-viewer-example.png)
+
+Changes:
 * MarkdownViewer.Draw(float contentWidth = float.NaN)\
 Passing default value results in normal behavior, but passing a value draws view in the specified width, rather than width of editor window.
 
