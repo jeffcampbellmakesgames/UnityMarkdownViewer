@@ -97,14 +97,14 @@ namespace MG.MDV
 
         //------------------------------------------------------------------------------
 
-        public void Draw(float contentWidth = float.NaN)
+        public void Draw( float contentWidth = float.NaN )
         {
             GUI.skin    = mSkin;
             GUI.enabled = true;
 
             // useable width of inspector windows
 
-            if (float.IsNaN(contentWidth))
+            if ( float.IsNaN(contentWidth) )
                 contentWidth = EditorGUIUtility.currentViewWidth - mSkin.verticalScrollbar.fixedWidth - 2.0f * Margin.x;
 
 
