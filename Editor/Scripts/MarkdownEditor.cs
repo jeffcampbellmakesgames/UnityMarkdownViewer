@@ -18,6 +18,11 @@ namespace MG.MDV
 
         protected void OnEnable()
         {
+	        if (target == null)
+	        {
+		        return;
+	        }
+
             var content = ( target as TextAsset ).text;
             var path    = AssetDatabase.GetAssetPath( target );
 
@@ -76,7 +81,7 @@ namespace MG.MDV
 
         private Editor mDefaultEditor;
 
-        void DrawEditor()
+        public void DrawEditor()
         {
             if( mViewer != null )
             {
